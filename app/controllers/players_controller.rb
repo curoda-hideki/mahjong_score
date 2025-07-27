@@ -7,6 +7,7 @@ class PlayersController < ApplicationController
     player = Player.create!(player_params)
     render json: player, status: :created
   end
+
   def update
     player = Player.find(params[:id])
     player.update!(player_params)
